@@ -36,34 +36,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //menu text
-                  Container(
-                    padding: const EdgeInsets.only(top: 70, left: 20),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.arrow_back_ios,
-                          size: 30,
-                          color: Colors.black54,
-                        ),
-                        Expanded(child: Container()),
-                        Container(
-                          margin: const EdgeInsets.only(right: 20),
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.grey.withOpacity(0.5)),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 30),
                   //discover text
                   Container(
-                    margin: const EdgeInsets.only(left: 20),
-                    child: AppLargeText(text: "Discover"),
-                  ),
+                      margin: const EdgeInsets.only(top: 20, left: 20),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.restaurant_menu,
+                            size: 50,
+                          ),
+                          SizedBox(width: 10),
+                          AppLargeText(text: "Food Review"),
+                        ],
+                      )),
                   SizedBox(
                     height: 20,
                   ),
@@ -83,13 +68,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               color: AppColors.mainColor, radius: 4),
                           tabs: [
                             Tab(
-                              text: "Places",
+                              text: "Foods",
                             ),
                             Tab(
-                              text: "Inspiration",
+                              text: "Desserts",
                             ),
                             Tab(
-                              text: "Emotions",
+                              text: "Drinks",
                             ),
                           ]),
                     ),
