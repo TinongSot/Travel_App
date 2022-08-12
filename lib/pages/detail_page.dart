@@ -79,9 +79,6 @@ class _DetailPageState extends State<DetailPage> {
                             AppLargeText(
                                 text: detail.place.name,
                                 color: Colors.black.withOpacity(0.8)),
-                            AppLargeText(
-                                text: "\$" + detail.place.price.toString(),
-                                color: AppColors.mainColor)
                           ],
                         ),
                         SizedBox(
@@ -123,50 +120,6 @@ class _DetailPageState extends State<DetailPage> {
                               color: AppColors.textColor2,
                             )
                           ],
-                        ),
-                        SizedBox(
-                          height: 25,
-                        ),
-                        AppLargeText(
-                            text: "People",
-                            color: Colors.black.withOpacity(0.8),
-                            size: 20),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        AppText(
-                            text: "Number of people in your group",
-                            color: AppColors.mainTextColor,
-                            size: 20),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Wrap(
-                          children: List.generate(5, (index) {
-                            return InkWell(
-                              onTap: () {
-                                setState(() {
-                                  selectedIndex = index;
-                                });
-                              },
-                              child: Container(
-                                margin: const EdgeInsets.only(right: 10),
-                                child: AppButtons(
-                                  size: 50,
-                                  color: selectedIndex == index
-                                      ? Colors.white
-                                      : Colors.black,
-                                  backgroundColor: selectedIndex == index
-                                      ? Colors.black
-                                      : AppColors.buttonBackground,
-                                  borderColor: selectedIndex == index
-                                      ? Colors.black
-                                      : AppColors.buttonBackground,
-                                  text: (index + 1).toString(),
-                                ),
-                              ),
-                            );
-                          }),
                         ),
                         SizedBox(
                           height: 20,
