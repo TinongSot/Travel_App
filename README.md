@@ -1,16 +1,41 @@
-# travel_app
+# Travel_app
 
-A new Flutter project.
+## Description
+
+To make traveller more easier to find more informations of places that they want or plan to go.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+    git clone https://github.com/TinongSot/Travel_App
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependencies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+dependencies:
+  
+    flutter:
+    
+      sdk: flutter
+
+      cupertino_icons: ^1.0.2
+
+      equatable: ^2.0.3
+
+      bloc: ^8.0.3
+
+      flutter_bloc: ^8.0.1
+
+      http: ^0.13.4
+
+## Authors
+
+TinongSot
+
+TaingMolika
+
+## Tools
+
+  Visual Studio Code,
+  Android Studio,
+  Github
