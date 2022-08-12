@@ -33,7 +33,7 @@ class ResponsiveButton extends StatelessWidget {
                     child: AppText(text: "Book Trip Now", color: Colors.white))
                 : Container(),
             Image.asset(
-              "img/button-two.png",
+              "img/button-one.png",
             ),
           ],
         ),
