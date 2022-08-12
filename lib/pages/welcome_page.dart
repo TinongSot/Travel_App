@@ -15,7 +15,7 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   List images = [
-    "food-review.png",
+    "welcome-three.png",
   ];
 
   List text = [];
@@ -43,9 +43,9 @@ class _WelcomePageState extends State<WelcomePage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          AppLargeText(text: "Foods"),
+                          AppLargeText(text: "Travel App"),
                           AppText(
-                            text: "Review",
+                            text: "Travel with Us",
                             size: 30,
                           ),
                           SizedBox(
@@ -55,7 +55,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             width: 250,
                             child: AppText(
                               text:
-                                  "We bring you food reviews of all the latest places to eat in Cambodia, from hawkers to restaurants to cafes.",
+                                  "Wherever you want to go or where you want to find, We can help you all the time 24/7",
                               color: AppColors.textColor2,
                               size: 14,
                             ),

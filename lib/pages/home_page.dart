@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             size: 50,
                           ),
                           SizedBox(width: 10),
-                          AppLargeText(text: "Food Review"),
+                          AppLargeText(text: "Welcome Traveler"),
                         ],
                       )),
                   SizedBox(
@@ -68,13 +68,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               color: AppColors.mainColor, radius: 4),
                           tabs: [
                             Tab(
-                              text: "Foods",
+                              text: "Places",
                             ),
                             Tab(
-                              text: "Desserts",
+                              text: "Inspirations",
                             ),
                             Tab(
-                              text: "Drinks",
+                              text: "Experience",
                             ),
                           ]),
                     ),
@@ -109,8 +109,56 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           );
                         },
                       ),
-                      Text("There"),
-                      Text("Bye"),
+                      ListView.builder(
+                        itemCount: info.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) {
+                          return GestureDetector(
+                            onTap: () {
+                              BlocProvider.of<AppCubits>(context)
+                                  .detailPage(info[index]);
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 15, top: 10),
+                              width: 200,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "http://mark.bslmeiyu.com/uploads/" +
+                                              info[index].img),
+                                      fit: BoxFit.cover)),
+                            ),
+                          );
+                        },
+                      ),
+                      ListView.builder(
+                        itemCount: info.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) {
+                          return GestureDetector(
+                            onTap: () {
+                              BlocProvider.of<AppCubits>(context)
+                                  .detailPage(info[index]);
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 15, top: 10),
+                              width: 200,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "http://mark.bslmeiyu.com/uploads/" +
+                                              info[index].img),
+                                      fit: BoxFit.cover)),
+                            ),
+                          );
+                        },
+                      ),
                     ]),
                   ),
                   SizedBox(
